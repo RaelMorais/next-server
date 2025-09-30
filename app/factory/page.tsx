@@ -3,7 +3,10 @@
 import { createFactory } from "../factoryServer/createFactory";
 import { useFormStatus } from 'react-dom';
 
-
+async function handleServerTeste() {
+  console.log("Teste de server actions!S")
+  
+}
 function SubmitButton() {
   const { pending } = useFormStatus();
 
@@ -28,8 +31,8 @@ export default function CarForm() {
         className="w-full border p-2 rounded"
       />
 
-
       <SubmitButton/>
+      <button onClick={handleServerTeste}>Oi</button>
     </form>
 
   );
