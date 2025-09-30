@@ -1,14 +1,13 @@
-// Seu arquivo CarForm.tsx
 'use client';
 
 import { createCar } from '../carsServer/createcars'; 
 import { Factory } from '../../src/actions/factories';
 
-interface CarFormProps {
-    factories: Factory[];
-}
+// interface CarFormProps {
+//     factories: Factory[];
+// }
 
-export default function CarForm({ factories }: CarFormProps) {
+export default function CarForm() {
     
     return (
         <form action={createCar} className="space-y-4 max-w-md p-4 border rounded">
@@ -27,23 +26,30 @@ export default function CarForm({ factories }: CarFormProps) {
                 className="w-full border p-2 rounded"
             />
 
-     
-            <select 
-                name="factory_engine" 
+         <input
+                name="factory_engine"
+                type='number'
+                placeholder="Engine Factory ID"
+                required
+                className="w-full border p-2 rounded"
+            />
+
+            {/* <select 
+                name="" 
                 required 
                 className="w-full border p-2 rounded"
             >
                 <option value="">Show a Factory</option>
                 {factories.map((factory) => (
                     <option 
-                        key={factory.id_engineFactory} 
+                        // key={factory.id_engineFactory} 
                       
                         value={factory.id_engineFactory}
                     >
                         {factory.name_factory}
                     </option>
                 ))}
-            </select>
+            </select> */}
             
             <select name="type" required className="w-full border p-2 rounded">
                 <option value="">Type o Engine</option>
