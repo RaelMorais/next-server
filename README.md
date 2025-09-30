@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+First Project using server actions in Nextjs to learning about 'use client' and 'use server' 
 
-## Getting Started
+# Install PNPM 
 
-First, run the development server:
+Winget: 
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+winget install -e --id pnpm.pnpm
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Npm: 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install -g pnpm@latest-10
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Install Dependencies 
+```bash
+pnpm i 
+```
 
-## Learn More
+# Configure Docker 
 
-To learn more about Next.js, take a look at the following resources:
+Run docker-compose using: 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+docker compose up -d
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Create .env and paste: 
 
-## Deploy on Vercel
+```bash
+DATABASE_URL=postgres://postgres:1234@localhost:5432/formula
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Make a Drizzle Migration 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash 
+npx drizzle-kit push
+```
+
+# Run 
+
+```bash 
+pnpm run dev 
+```
+
+acess in: http://localhost:3000/
