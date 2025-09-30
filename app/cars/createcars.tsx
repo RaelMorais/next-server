@@ -1,8 +1,7 @@
-// app/actions/createCar.ts
 'use server';
 
-import { db } from '../src/index';
-import { CarsTable } from '../src/db/schema'
+import { db } from '../../src/index';
+import { } from '../../src/db/schema'
 
 export async function createCar(formData: FormData) {
   const name = formData.get('name')?.toString() || '';
